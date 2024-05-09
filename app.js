@@ -23,7 +23,13 @@ function popBallon(event) {
     event.target.removeEventListener('mouseover', popBallon);
 
     // FALTA: Si el número de globos ha llegado a 0, debemos ocultar todos los balones y mostrar el div <div id="yay-no-balloons">
+
+    if (totalBalloonstoBePooped == 0){
+        document.querySelector("#balloon-gallery").style.display = "none";
     // FAlTA: mostrar la pantalla de vicoria al explotar todos los globos
+        document.querySelector("#yay-no-balloons").style.display = "block";
+    }
+
 
 }
 
