@@ -4,6 +4,12 @@
 const balloons = document.querySelectorAll('.balloon');
 console.log("🚀 ~ file: app.js:4 ~ balloons:", balloons);
 
+// variable de estado que me indica cuantos balones quedan por explotar
+let totalBalloonstoBePooped = balloons.length;
+console.log("🚀 ~ file: app.js:10 ~ totalBalloonstoBePooped:", totalBalloonstoBePooped);
+document.querySelector('#left').textContent = totalBalloonstoBePooped;
+
+
 // defino una función para gestionar el evento mouseover
 function popBallon(event) {
     console.log(event.target);
